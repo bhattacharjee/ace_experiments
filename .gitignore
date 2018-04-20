@@ -1,0 +1,7 @@
+*.so
+*.shobj
+*.obj
+.depend.Library_Unload
+*.swp
+*.swo
+UnloadLibACE
