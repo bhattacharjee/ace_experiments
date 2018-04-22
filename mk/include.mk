@@ -7,14 +7,19 @@ INCLUDES += -I$(ACE_ROOT)
 
 CXX = gcc
 
-all: $(BIN)
+all: $(BIN) $(BIN1)
 
 $(BIN): $(SRC)
 	$(CXX) -o $(BIN) $(SRC) $(CFLAGS) $(LDFLAGS) $(INCLUDES)
 
+$(BIN1): $(SRC1)
+	$(CXX) -o $(BIN1) $(SRC1) $(CFLAGS) $(LDFLAGS) $(INCLUDES)
+
+$(BIN2): $(SRC2)
+	$(CXX) -o $(BIN2) $(SRC2) $(CFLAGS) $(LDFLAGS) $(INCLUDES)
 
 clean:
-	rm -f $(BIN)
+	rm -f $(BIN) $(BIN1) $(BIN2)
 
 #include $(ACE_ROOT)/include/makeinclude/wrapper_macros.GNU
 #include $(ACE_ROOT)/include/makeinclude/macros.GNU
